@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html>
-
+<html lang = "en">
 <head>
-    
+    <meta charset = "UTF-8">
+    <link rel="stylesheet" href="./style.css">
 </head>
-<link rel="stylesheet" href="./style.css">
-<script src="./ball.js"></script>
 
 <body>
 <!--    <p>Refresh this page to see your code changes in action</p>   -->
     <!-- YOUR CODE STARTS HERE -->
-    <p style="font-size:48px">Bonus Ball Project</p>
+    <div>
+    <p style="font-size:48px">Ball Project</p>
+    <p class = "ball">Click</class> 
+    <!--<button onClick = "moveBall()">Click</button>-->
+    <button id="button">moveBall</button>
+    <!--<input id="button" type="submit" name="button" value="Add Balls" onclick="moveBall();" /><br/>-->
+    </div>
+
+    
+<script src="./ball.js"></script>
 
     <div id="ball" style="z-index: 5;
      position: absolute;

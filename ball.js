@@ -2,7 +2,7 @@ var positionX = 100;
 var positionY = 0;
 var velocity = 100;
 var reverse = false;
-let x = 5;
+
 var ball = document.getElementById("ball");
 var ball2 = document.getElementById("ball2");
 var ball3 = document.getElementById("ball3");
@@ -13,18 +13,23 @@ var ball7 = document.getElementById("ball7");
 var ball8 = document.getElementById("ball8");
 var ball9 = document.getElementById("ball9");
 var ball10 = document.getElementById("ball10");
+//const name = document.querySelector(".ball");
+document.getElementById("button").addEventListener("click", moveBall);
+
+
+
 //const getRandom = (min, max) => Math.floor(Math.random()*(max-min+1)+min);
 //write a function that can change the position of the html element "ball"
 
 function moveBall() {
+    setInterval(moveBall, 400);
   const getRandom = (min, max) => Math.floor(Math.random()*(max-min+1)+min);
   var Xmin = 0;
   var Xmax = 400;
 
   var Ymin = 0;
   var Ymax = 400;
-  context = myCanvas.getContext('2d');
-    context.beginPath();
+
 
   if (reverse) {
     positionX = positionX - velocity;
@@ -74,6 +79,9 @@ function moveBall() {
    ball10.style.top = getRandom(0, 600)+'px';
  }
  if (
+    velocity > 100){
+    velocity = 100;}
+ if (
     positionX > Xmax ||
     positionX === Xmin ||
     positionY > Ymax ||
@@ -81,9 +89,9 @@ function moveBall() {
   ) {
     reverse = !reverse;
   }
+  
 }
 
 
 
 
-setInterval(moveBall, 200);
